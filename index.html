@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="titulo">
+      <img src="icons/cadeado.svg" alt="icone de cadeado" />
+      <h1 class="title">Gerador de senhas</h1>
+      <h2 class="subtitle">
+        Gere instantaneamente uma senha aleatória e segura
+      </h2>
+    </div>
+    <div class="campo-senha">
+      <div class="item campo-senha-titulo">senha</div>
+      <div class="item campo-visualizacao-senha">zcBLsNGX2616</div>
+      <div class="item"><img src="icons/copiar.svg" alt="icone copiar" /></div>
+      <div class="item">
+        <img src="icons/refresh.svg" alt="icone para gerar senha aleatória" />
+      </div>
+    </div>
+    <div class="campo-personalizacao">
+      <div class="personalizacao-titulo">Personalize sua senha</div>
+      <div class="personalizacao-conteudo">
+        <div class="personalizacao-numero-caracteres">
+          <div class="personalizacao-conteudo-titulo">Número de caracteres</div>
+          <input
+            class="personalizacao-conteudo-medidor"
+            type="range"
+            min="0"
+            max="24"
+            id="range"
+            value="12"
+          />
+          <div class="personalizacao-conteudo-quantidade-caracteres">12</div>
+        </div>
+        <div class="personalizacao-caracteristicas">
+          <div class="personalizacao-conteudo-titulo">
+            Características da senha
+          </div>
+          <div style="margin-top: 24px" class="campo-checkbox">
+            <input
+              type="checkbox"
+              class="personalizacao-caracteristicas-checkbox"
+              checked="checked"
+            />
+            <label class="personalizacao-caracteristicas-texto">
+              Letras maiusculas
+            </label>
+          </div>
+          <div class="campo-checkbox">
+            <input
+              type="checkbox"
+              class="personalizacao-caracteristicas-checkbox"
+              checked="checked"
+            />
+            <label class="personalizacao-caracteristicas-texto">
+              Letras minusculas
+            </label>
+          </div>
+          <div class="campo-checkbox">
+            <input
+              type="checkbox"
+              class="personalizacao-caracteristicas-checkbox"
+              checked="checked"
+            />
+            <label class="personalizacao-caracteristicas-texto">Números</label>
+          </div>
+          <div class="campo-checkbox">
+            <input
+              type="checkbox"
+              class="personalizacao-caracteristicas-checkbox"
+              checked="checked"
+            />
+            <label class="personalizacao-caracteristicas-texto">Símbolos</label>
+          </div>
+        </div>
+        <div>
+          <div class="personalizacao-conteudo-titulo">Força da senha</div>
+          <div class="progress-bar"></div>
+          <div class="progress-bar-title-group">
+            <label class="progress-bar-title">Fraca</label>
+            <label class="progress-bar-title">Média</label>
+            <label class="progress-bar-title">Forte</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
