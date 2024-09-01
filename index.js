@@ -32,14 +32,6 @@ function caracteresCompleto() {
   if (checkboxSimbolos) {
     caracteres = `${caracteres}${caracteresSimbolos}`;
   }
-  if (
-    !checkboxMaiusculas &&
-    !checkboxMinusculas &&
-    !checkboxNumeros &&
-    !checkboxSimbolos
-  ) {
-    caracteres = caracteresMinusculos;
-  }
 }
 
 function checkboxAtivoMaiusculas() {
@@ -97,16 +89,20 @@ function medeForcaDaSenha() {
 
 function gerarSenha() {
   caracteresCompleto();
-  const caracteresArray = Array.from(caracteres);
-  const randomValues = new Uint32Array(medidor);
-  let senhaGerada = '';
-  window.crypto.getRandomValues(randomValues);
-  for (let i = 0; i < medidor; i++) {
-    const randomIndex = randomValues[i] % caracteresArray.length;
-    senhaGerada += caracteresArray[randomIndex];
+  if (!caracteres) {
+    alert('Por favor, marque alguma opção!');
+  } else {
+    const caracteresArray = Array.from(caracteres);
+    const randomValues = new Uint32Array(medidor);
+    let senhaGerada = '';
+    window.crypto.getRandomValues(randomValues);
+    for (let i = 0; i < medidor; i++) {
+      const randomIndex = randomValues[i] % caracteresArray.length;
+      senhaGerada += caracteresArray[randomIndex];
+    }
+    resultadoSenha = senhaGerada;
+    document.getElementById('senha').innerHTML = resultadoSenha;
   }
-  resultadoSenha = senhaGerada;
-  document.getElementById('senha').innerHTML = resultadoSenha;
 }
 function copiaSenha() {
   const textarea = document.createElement('textarea');
@@ -118,7 +114,7 @@ function copiaSenha() {
     if (resultadoSenha) {
       alert('Texto copiado para a área de transferência!');
     } else {
-      alert('Por favor, gere alguma senha válida!');
+      alert('Por favor, clique no botão para gerar a senha!');
     }
   } catch (err) {
     console.error('Falha ao copiar usando document.execCommand: ', err);
