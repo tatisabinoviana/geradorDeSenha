@@ -16,3 +16,4 @@ Caso o botão de gerar senha não seja acionado e o usuário tentar copiar a sen
 
 ## Como rodar o projeto
 Caso você esteja trabalhando no projeto e precise rodar ele para visualizá-lo, basta abrir o arquivo `index.html` no seu browser ou utilizar alguma ferramenta como *Live Server*.
+E caso queira ver o projeto rodando, basta acessar o link [gerador-de-senha-gray-psi.vercel.app](https://gerador-de-senha-gray-psi.vercel.app/)
