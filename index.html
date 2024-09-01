@@ -18,9 +18,15 @@
     <div class="campo-senha">
       <div class="item campo-senha-titulo">senha</div>
       <div class="item campo-visualizacao-senha" id="senha"></div>
-      <div class="item"><img src="icons/copiar.svg" alt="icone copiar" /></div>
-      <div class="item">
-        <img src="icons/refresh.svg" alt="icone para gerar senha aleatória" />
+      <div class="item" style="cursor: pointer">
+        <img src="icons/copiar.svg" alt="icone copiar" onclick="copiaSenha()" />
+      </div>
+      <div class="item" style="cursor: pointer">
+        <img
+          src="icons/refresh.svg"
+          alt="icone para gerar senha aleatória"
+          onclick="gerarSenha()"
+        />
       </div>
     </div>
     <div class="campo-personalizacao">
@@ -98,6 +104,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="campo-botao">
+      <button onclick="copiaSenha()">Copiar senha</button>
     </div>
     <script src="index.js"></script>
   </body>

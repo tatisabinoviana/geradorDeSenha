@@ -2,7 +2,7 @@ html {
   background-color: #0f021b;
 }
 body {
-  margin: 5%;
+  margin: 83px;
   display: grid;
   justify-content: center;
 }
@@ -13,12 +13,17 @@ body {
 
 .title {
   font-family: 'Roboto Mono', monospace;
+  margin-bottom: 0px;
+  margin-top: 8px;
 }
 .subtitle {
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 0px;
+  margin-top: 8px;
 }
 .campo-senha {
   /* text-align: center; */
+  margin-top: 57px;
   background-color: #2c1746;
   width: 1089px;
   height: 111px;
@@ -52,6 +57,7 @@ body {
   width: 1089px;
   height: 382.28px;
   background-color: #180828;
+  margin-top: 30px;
 }
 .personalizacao-titulo {
   margin-top: 40px;
@@ -141,4 +147,26 @@ body {
   min-height: 24px;
   margin-right: 5px;
   accent-color: #ffffff;
+}
+.campo-botao {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  button {
+    width: 154px;
+    height: 46px;
+    /* top: 833.25px;
+    left: 643px;
+    padding: 10px 12px 10px 12px;
+    gap: 10px;
+    border-radius: 2px 0px 0px 0px;
+    opacity: 0px; */
+    background: #fd58ff;
+    color: #0f021b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    cursor: pointer;
+    /* display: flex;
+    align-items: center; */
+  }
 }

@@ -16,7 +16,7 @@ let caracteres = caracteresMinusculos;
 function mudancaDoRange(value) {
   medidor = value;
   document.getElementById('quantidade').innerHTML = medidor;
-  gerarSenha();
+  limparCampoSenha();
 }
 function caracteresCompleto() {
   caracteres = '';
@@ -45,40 +45,32 @@ function caracteresCompleto() {
 function checkboxAtivoMaiusculas() {
   if (document.getElementById('checkbox-maiusculas').checked) {
     checkboxMaiusculas = true;
-    // caracteresCompleto();
   } else {
     checkboxMaiusculas = false;
-    // caracteresCompleto();
   }
   medeForcaDaSenha();
 }
 function checkboxAtivoMinusculas() {
   if (document.getElementById('checkbox-minusculas').checked) {
     checkboxMinusculas = true;
-    // caracteresCompleto();
   } else {
     checkboxMinusculas = false;
-    // caracteresCompleto();
   }
   medeForcaDaSenha();
 }
 function checkboxAtivoNumeros() {
   if (document.getElementById('checkbox-numeros').checked) {
     checkboxNumeros = true;
-    // caracteresCompleto();
   } else {
     checkboxNumeros = false;
-    // caracteresCompleto();
   }
   medeForcaDaSenha();
 }
 function checkboxAtivoSimbolos() {
   if (document.getElementById('checkbox-simbolos').checked) {
     checkboxSimbolos = true;
-    // caracteresCompleto();
   } else {
     checkboxSimbolos = false;
-    // caracteresCompleto();
   }
   medeForcaDaSenha();
 }
@@ -101,7 +93,7 @@ function medeForcaDaSenha() {
   }
   console.log('forcaDaSenha:', forcaDaSenha);
   progressbar.style.setProperty('--progress', forcaDaSenha);
-  gerarSenha();
+  limparCampoSenha();
 }
 
 // range.addEventListener('input', function () {
@@ -139,4 +131,36 @@ function gerarSenha() {
   }
   resultadoSenha = senhaGerada;
   document.getElementById('senha').innerHTML = resultadoSenha;
+}
+// async function copiaSenha() {
+//   if (!navigator.clipboard) {
+//     alert('A API Clipboard não é suportada pelo seu navegador.');
+//     return;
+//   }
+//   console.log('Click!');
+//   const textArea = document.getElementById('senha').value;
+//   await navigator.clipboard.writeText(textArea);
+// }
+function copiaSenha() {
+  // const texto = document.getElementById('senha').value;
+  const textarea = document.createElement('textarea');
+  textarea.value = resultadoSenha;
+  document.body.appendChild(textarea);
+  textarea.select();
+  try {
+    document.execCommand('copy');
+    if (resultadoSenha) {
+      alert('Texto copiado para a área de transferência!');
+    } else {
+      alert('Por favor, gere alguma senha válida!');
+    }
+  } catch (err) {
+    console.error('Falha ao copiar usando document.execCommand: ', err);
+    alert('Não foi possível copiar o texto.');
+  }
+  document.body.removeChild(textarea);
+}
+function limparCampoSenha() {
+  resultadoSenha = '';
+  document.getElementById('senha').innerHTML = '';
 }
