@@ -12,17 +12,18 @@ body {
 }
 
 .title {
+  font-size: 32px;
   font-family: 'Roboto Mono', monospace;
   margin-bottom: 0px;
   margin-top: 8px;
 }
 .subtitle {
+  font-size: 24px;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 0px;
   margin-top: 8px;
 }
 .campo-senha {
-  /* text-align: center; */
   margin-top: 57px;
   background-color: #2c1746;
   width: 1089px;
@@ -50,9 +51,7 @@ body {
 }
 .campo-personalizacao {
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: column;
-  /* align-items: center; */
   border: 1px solid #694a81;
   width: 1089px;
   height: 382.28px;
@@ -76,15 +75,9 @@ body {
   flex-direction: row;
   align-items: flex-start;
 }
-.personalizacao-conteudo-titulo {
-  color: #8a87aa;
-  font-size: 24px;
-  font-family: 'Roboto', sans-serif;
-}
+
 .personalizacao-numero-caracteres {
   display: flex;
-  /* justify-content: space-between;
-  align-items: flex-start; */
   flex-direction: column;
   input {
     width: 100%;
@@ -99,7 +92,6 @@ body {
   --progress: 10;
   width: 300px;
   height: 32px;
-  /* padding: 5px; */
   background-color: #2c1746;
   display: flex;
 }
@@ -115,38 +107,25 @@ body {
   flex-direction: row;
   align-items: center;
 }
-.progress-bar-title {
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  color: #8a87aa;
-}
-/* .personalizacao-conteudo-medidor {
-  margin-top: 24px;
-} */
+
 .personalizacao-conteudo-quantidade-caracteres {
   background-color: #2c1746;
   border: 1px solid #694a81;
   width: 65.9px;
   height: 55px;
-  color: #8a87aa;
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
   display: flex;
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 24px;
 }
-.personalizacao-caracteristicas-texto {
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  color: #8a87aa;
-}
+
 .personalizacao-caracteristicas-checkbox {
   min-width: 24px;
   min-height: 24px;
   margin-right: 5px;
   accent-color: #ffffff;
+  cursor: pointer;
 }
 .campo-botao {
   display: flex;
@@ -155,18 +134,22 @@ body {
   button {
     width: 154px;
     height: 46px;
-    /* top: 833.25px;
-    left: 643px;
-    padding: 10px 12px 10px 12px;
-    gap: 10px;
-    border-radius: 2px 0px 0px 0px;
-    opacity: 0px; */
     background: #fd58ff;
     color: #0f021b;
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
-    cursor: pointer;
-    /* display: flex;
-    align-items: center; */
   }
+}
+.cursor-apontar {
+  cursor: pointer;
+}
+.descricoes {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #8a87aa;
+}
+.conf-subtitulos {
+  color: #8a87aa;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
 }

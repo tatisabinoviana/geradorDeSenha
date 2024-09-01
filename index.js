@@ -10,7 +10,7 @@ let resultadoSenha = '';
 const caracteresMaiusculos = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const caracteresMinusculos = 'abcdefghijklmnopqrstuvwxyz';
 const caracteresNumeros = '0123456789';
-const caracteresSimbolos = '!@#$%^&*()_+[]{}|;:,.<>?';
+const caracteresSimbolos = '!@#$%^&*()_+[]{}|;:,.?';
 let caracteres = caracteresMinusculos;
 
 function mudancaDoRange(value) {
@@ -91,40 +91,16 @@ function medeForcaDaSenha() {
   } else {
     forcaDaSenha = 10;
   }
-  console.log('forcaDaSenha:', forcaDaSenha);
   progressbar.style.setProperty('--progress', forcaDaSenha);
   limparCampoSenha();
 }
 
-// range.addEventListener('input', function () {
-//   const value = range.value;
-//   progressbar.style.setProperty('--progress', value);
-// });
-
 function gerarSenha() {
-  // let checkboxMaiusculas = false;
-  // let checkboxMinusculas = true;
-  // let checkboxNumeros = false;
-  // let checkboxSimbolos = false;
-  // caracteres = caracteresMinusculos;
-  // if (checkboxMaiusculas) {
-  //   caracteres = caracteresMinusculos;
-  //   if (checkboxMinusculas) {
-  //     caracteres = +caracteresMaiusculos;
-  //     if (checkboxNumeros) {
-  //       caracteres = +caracteresNumeros;
-  //       if (checkboxSimbolos) {
-  //         caracteres = +caracteresSimbolos;
-  //       }
-  //     }
-  //   }
-  // }
   caracteresCompleto();
   const caracteresArray = Array.from(caracteres);
   const randomValues = new Uint32Array(medidor);
   let senhaGerada = '';
   window.crypto.getRandomValues(randomValues);
-
   for (let i = 0; i < medidor; i++) {
     const randomIndex = randomValues[i] % caracteresArray.length;
     senhaGerada += caracteresArray[randomIndex];
@@ -132,17 +108,7 @@ function gerarSenha() {
   resultadoSenha = senhaGerada;
   document.getElementById('senha').innerHTML = resultadoSenha;
 }
-// async function copiaSenha() {
-//   if (!navigator.clipboard) {
-//     alert('A API Clipboard não é suportada pelo seu navegador.');
-//     return;
-//   }
-//   console.log('Click!');
-//   const textArea = document.getElementById('senha').value;
-//   await navigator.clipboard.writeText(textArea);
-// }
 function copiaSenha() {
-  // const texto = document.getElementById('senha').value;
   const textarea = document.createElement('textarea');
   textarea.value = resultadoSenha;
   document.body.appendChild(textarea);

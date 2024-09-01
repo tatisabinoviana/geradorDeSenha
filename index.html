@@ -18,10 +18,10 @@
     <div class="campo-senha">
       <div class="item campo-senha-titulo">senha</div>
       <div class="item campo-visualizacao-senha" id="senha"></div>
-      <div class="item" style="cursor: pointer">
+      <div class="item cursor-apontar">
         <img src="icons/copiar.svg" alt="icone copiar" onclick="copiaSenha()" />
       </div>
-      <div class="item" style="cursor: pointer">
+      <div class="item cursor-apontar" style="cursor: pointer">
         <img
           src="icons/refresh.svg"
           alt="icone para gerar senha aleatória"
@@ -33,9 +33,9 @@
       <div class="personalizacao-titulo">Personalize sua senha</div>
       <div class="personalizacao-conteudo">
         <div class="personalizacao-numero-caracteres">
-          <div class="personalizacao-conteudo-titulo">Número de caracteres</div>
+          <div class="conf-subtitulos">Número de caracteres</div>
           <input
-            class="personalizacao-conteudo-medidor"
+            class="cursor-apontar"
             type="range"
             min="4"
             max="20"
@@ -44,14 +44,12 @@
             onchange="mudancaDoRange(this.value)"
           />
           <div
-            class="personalizacao-conteudo-quantidade-caracteres"
+            class="personalizacao-conteudo-quantidade-caracteres conf-subtitulos"
             id="quantidade"
           ></div>
         </div>
         <div class="personalizacao-caracteristicas">
-          <div class="personalizacao-conteudo-titulo">
-            Características da senha
-          </div>
+          <div class="conf-subtitulos">Características da senha</div>
           <div style="margin-top: 24px" class="campo-checkbox">
             <input
               type="checkbox"
@@ -59,9 +57,7 @@
               class="personalizacao-caracteristicas-checkbox"
               onclick="checkboxAtivoMaiusculas()"
             />
-            <label class="personalizacao-caracteristicas-texto">
-              Letras maiusculas
-            </label>
+            <label class="descricoes"> Letras maiusculas </label>
           </div>
           <div class="campo-checkbox">
             <input
@@ -71,9 +67,7 @@
               onclick="checkboxAtivoMinusculas()"
               checked="checked"
             />
-            <label class="personalizacao-caracteristicas-texto">
-              Letras minusculas
-            </label>
+            <label class="descricoes"> Letras minusculas </label>
           </div>
           <div class="campo-checkbox">
             <input
@@ -82,7 +76,7 @@
               class="personalizacao-caracteristicas-checkbox"
               onclick="checkboxAtivoNumeros()"
             />
-            <label class="personalizacao-caracteristicas-texto">Números</label>
+            <label class="descricoes">Números</label>
           </div>
           <div class="campo-checkbox">
             <input
@@ -91,22 +85,24 @@
               class="personalizacao-caracteristicas-checkbox"
               onclick="checkboxAtivoSimbolos()"
             />
-            <label class="personalizacao-caracteristicas-texto">Símbolos</label>
+            <label class="descricoes">Símbolos</label>
           </div>
         </div>
         <div>
-          <div class="personalizacao-conteudo-titulo">Força da senha</div>
+          <div class="conf-subtitulos">Força da senha</div>
           <div class="progress-bar"></div>
           <div class="progress-bar-title-group">
-            <label class="progress-bar-title">Fraca</label>
-            <label class="progress-bar-title">Média</label>
-            <label class="progress-bar-title">Forte</label>
+            <label class="descricoes">Fraca</label>
+            <label class="descricoes">Média</label>
+            <label class="descricoes">Forte</label>
           </div>
         </div>
       </div>
     </div>
     <div class="campo-botao">
-      <button onclick="copiaSenha()">Copiar senha</button>
+      <button class="cursor-apontar" onclick="copiaSenha()">
+        Copiar senha
+      </button>
     </div>
     <script src="index.js"></script>
   </body>
