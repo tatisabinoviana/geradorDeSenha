@@ -1,0 +1,164 @@
+body {
+  background-color: #0f021b;
+  margin: 83px;
+  display: grid;
+  justify-content: center;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+  margin: 8px 0px 0px;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  margin: 8px 0px 0px;
+}
+
+.campo-senha {
+  margin-top: 57px;
+  background-color: #2c1746;
+  width: 1089px;
+  height: 111px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 4.4px solid #fd58ff;
+}
+.campo-senha .item {
+  margin-right: 40px;
+}
+
+.campo-senha-titulo {
+  margin-left: 40px;
+  color: #8a87aa;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.campo-visualizacao-senha {
+  width: 850px;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.campo-personalizacao {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #694a81;
+  width: 1089px;
+  height: 382.28px;
+  background-color: #180828;
+  margin-top: 30px;
+}
+
+.personalizacao-titulo {
+  margin: 40px;
+  color: #d7d5eb;
+  font-size: 28px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.personalizacao-conteudo {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.personalizacao-numero-caracteres {
+  display: flex;
+  flex-direction: column;
+}
+.personalizacao-numero-caracteres input {
+  width: 100%;
+  margin-top: 24px;
+  accent-color: #ffffff;
+}
+
+.progress-bar {
+  --progress: 10;
+  margin: 24px 0px;
+  width: 300px;
+  height: 32px;
+  display: flex;
+  background-color: #2c1746;
+}
+
+.progress-bar::before {
+  content: "";
+  width: calc(var(--progress) * 1%);
+  background-color: hsl(calc(var(--progress) * 1.2), 80%, 50%);
+  transition: all 0.2s ease;
+}
+
+.progress-bar-title-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.personalizacao-conteudo-quantidade-caracteres {
+  background-color: #2c1746;
+  border: 1px solid #694a81;
+  width: 65.9px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 24px;
+}
+
+.personalizacao-caracteristicas-checkbox {
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 5px;
+  accent-color: #ffffff;
+  cursor: pointer;
+}
+
+.campo-botao {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+.campo-botao button {
+  width: 154px;
+  height: 46px;
+  background: #fd58ff;
+  font-family: "Roboto", sans-serif;
+  color: #0f021b;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+}
+
+.cursor-apontar {
+  cursor: pointer;
+}
+
+.descricoes {
+  color: #8a87aa;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.conf-subtitulos {
+  color: #8a87aa;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=output.css.map */
