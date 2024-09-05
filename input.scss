@@ -26,62 +26,158 @@ $cor-5: #d7d5eb;
 
 body {
   background-color: $cor-2;
-  margin: 83px;
-  display: grid;
+  margin: 3%;
+  display: flex;
   justify-content: center;
+}
+.container {
+  @media screen and (min-width: 28.187rem) and (max-width: 64rem) {
+    width: 100%;
+  }
+  @media screen and (max-width: 28.125rem) {
+    width: 100%;
+    padding: 1.25rem;
+  }
 }
 .titulo {
   text-align: center;
 }
 
 .title {
-  @include titulo-subtitulo(32px);
+  @include titulo-subtitulo(2rem);
 }
 .subtitle {
-  @include titulo-subtitulo(24px);
+  @include titulo-subtitulo(1.5rem);
 }
 .campo-senha {
-  margin-top: 57px;
+  margin-top: 3.5rem;
   background-color: $cor-secundaria;
-  width: 1089px;
-  height: 111px;
+  width: 68rem;
+  height: 6.9rem;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  border-bottom: 4.4px solid $cor-3;
+  border-bottom: 0.27rem solid $cor-3;
   .item {
-    margin-right: 40px;
+    margin-right: 2.5rem;
+    @media screen and (min-width: 28.187rem) and (max-width: 64rem) {
+      margin-right: 2%;
+    }
+    @media screen and (max-width: 28.125rem) {
+      margin-right: 0rem;
+    }
+  }
+  @media screen and (min-width: 28.187rem) and (max-width: 64rem) {
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 2%;
+  }
+  @media screen and (max-width: 28.125rem) {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.25rem;
+  }
+}
+.campo-senha-visualizacao-icones {
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 28.125rem) {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+.campo-senha-icones {
+  display: flex;
+  flex-direction: row;
+  margin: 0 2.5rem;
+  div {
+    margin: 0 1rem;
+  }
+  @media screen and (min-width: 28.187rem) and (max-width: 64rem) {
+    width: 35%;
+    margin: 0;
+    justify-content: space-evenly;
+    div {
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 28.125rem) {
+    width: 100%;
+    margin-bottom: 2%;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 .campo-senha-titulo {
-  margin-left: 40px;
-
-  @include texto-mix($cor-primaria, 20px);
+  margin-left: 2.5rem;
+  @include texto-mix($cor-primaria, 1.25rem);
+  @media screen and (min-width: 28.187rem) and (max-width: 64rem) {
+    margin-left: 2%;
+  }
+  @media screen and (max-width: 28.125rem) {
+    margin-left: 0;
+    margin-top: 2%;
+  }
 }
 .campo-visualizacao-senha {
-  width: 850px;
-  @include texto-usando-titulo($cor-titulo, 40px);
+  width: 53.2rem;
+  @media screen and (min-width: 28.187rem) and (max-width: 64rem) {
+    width: 85%;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 1.6rem;
+  }
+  @media screen and (max-width: 28.125rem) {
+    width: 85%;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 1.6rem;
+  }
+  color: $cor-titulo;
+  font-family: $fonte-titulo;
+  font-size: 2.5rem;
 }
+
 .campo-personalizacao {
   display: flex;
   flex-direction: column;
   border: 1px solid $cor-1;
-  width: 1089px;
+  width: 68.1rem;
   height: 382.28px;
   background-color: $cor-4;
-  margin-top: 30px;
+  margin-top: 1.875rem;
+  @media screen and (max-width: 64rem) {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .personalizacao-titulo {
-  margin: 40px;
-  @include texto-usando-titulo($cor-5, 28px);
+  margin: 2.5rem;
+  @include texto-usando-titulo($cor-5, 1.75rem);
+  @media screen and (max-width: 64rem) {
+    margin: 5%;
+  }
 }
 .personalizacao-conteudo {
-  margin: 40px;
+  margin: 2.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: flex-start;
+  @media screen and (max-width: 64rem) {
+    width: 90%;
+    margin: 5%;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 .personalizacao-numero-caracteres {
@@ -89,18 +185,27 @@ body {
   flex-direction: column;
   input {
     width: 100%;
-    margin-top: 24px;
+    margin-top: 1.5rem;
     accent-color: $cor-titulo;
+  }
+}
+
+.progress-bar-com-titulo {
+  @media screen and (max-width: 64rem) {
+    margin-top: 5%;
   }
 }
 
 .progress-bar {
   --progress: 10;
-  margin: 24px 0px;
-  width: 300px;
-  height: 32px;
+  margin: 1.5rem 0px;
+  width: 18.75rem;
+  height: 2rem;
   display: flex;
   background-color: $cor-secundaria;
+  @media screen and (max-width: 64rem) {
+    width: 100%;
+  }
 }
 .progress-bar::before {
   content: '';
@@ -124,37 +229,47 @@ body {
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 
 .checkbox-maiusculas {
-  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+.personalizacao-caracteristicas {
+  @media screen and (max-width: 28.125rem) {
+    margin-top: 5%;
+  }
 }
 .personalizacao-caracteristicas-checkbox {
-  min-width: 24px;
-  min-height: 24px;
-  margin-right: 5px;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  margin-right: 0.31rem;
   accent-color: $cor-titulo;
   cursor: pointer;
 }
 .campo-botao {
   display: flex;
   justify-content: center;
-  margin-top: 35px;
+  margin-top: 2.19rem;
   button {
-    width: 154px;
-    height: 46px;
+    width: 9.625rem;
+    height: 2.875rem;
     background: $cor-3;
     font-family: $fonte-subtitulo;
-    @include texto-mix($cor-2, 22px);
+    @include texto-mix($cor-2, 1.37rem);
+    @media screen and (max-width: 64rem) {
+      width: 100%;
+    }
   }
 }
 .cursor-apontar {
   cursor: pointer;
+  border: none;
+  border-radius: 0.125rem;
 }
 .descricoes {
-  @include texto-mix($cor-primaria, 20px);
+  @include texto-mix($cor-primaria, 1.25rem);
 }
 .conf-subtitulos {
-  @include texto-mix($cor-primaria, 24px);
+  @include texto-mix($cor-primaria, 1.5rem);
 }

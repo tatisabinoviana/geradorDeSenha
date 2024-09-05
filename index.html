@@ -8,101 +8,111 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="titulo">
-      <img src="icons/cadeado.svg" alt="icone de cadeado" />
-      <h1 class="title">Gerador de senhas</h1>
-      <h2 class="subtitle">
-        Gere instantaneamente uma senha aleatória e segura
-      </h2>
-    </div>
-    <div class="campo-senha">
-      <div class="item campo-senha-titulo">senha</div>
-      <div class="item campo-visualizacao-senha" id="senha"></div>
-      <div class="item cursor-apontar">
-        <img src="icons/copiar.svg" alt="icone copiar" onclick="copiaSenha()" />
+    <div class="container">
+      <div class="titulo">
+        <img src="icons/cadeado.svg" alt="icone de cadeado" />
+        <h1 class="title">Gerador de senhas</h1>
+        <h2 class="subtitle">
+          Gere instantaneamente uma senha aleatória e segura
+        </h2>
       </div>
-      <div class="item cursor-apontar">
-        <img
-          src="icons/refresh.svg"
-          alt="icone para gerar senha aleatória"
-          onclick="gerarSenha()"
-        />
-      </div>
-    </div>
-    <div class="campo-personalizacao">
-      <div class="personalizacao-titulo">Personalize sua senha</div>
-      <div class="personalizacao-conteudo">
-        <div class="personalizacao-numero-caracteres">
-          <div class="conf-subtitulos">Número de caracteres</div>
-          <input
-            class="cursor-apontar"
-            type="range"
-            min="4"
-            max="20"
-            id="range"
-            value="4"
-            onchange="mudancaDoRange(this.value)"
-          />
-          <div
-            class="personalizacao-conteudo-quantidade-caracteres conf-subtitulos"
-            id="quantidade"
-          ></div>
-        </div>
-        <div class="personalizacao-caracteristicas">
-          <div class="conf-subtitulos">Características da senha</div>
-          <div class="campo-checkbox checkbox-maiusculas">
-            <input
-              type="checkbox"
-              id="checkbox-maiusculas"
-              class="personalizacao-caracteristicas-checkbox"
-              onclick="checkboxAtivoMaiusculas()"
+      <div class="campo-senha">
+        <div class="item campo-senha-titulo">senha</div>
+        <div class="campo-visualizacao-senha" id="senha"></div>
+        <div class="campo-senha-icones">
+          <div class="cursor-apontar">
+            <img
+              src="icons/copiar.svg"
+              alt="icone copiar"
+              onclick="copiaSenha()"
             />
-            <label class="descricoes"> Letras maiusculas </label>
           </div>
-          <div class="campo-checkbox">
-            <input
-              type="checkbox"
-              id="checkbox-minusculas"
-              class="personalizacao-caracteristicas-checkbox"
-              onclick="checkboxAtivoMinusculas()"
-              checked="checked"
+          <div class="cursor-apontar">
+            <img
+              src="icons/refresh.svg"
+              alt="icone para gerar senha aleatória"
+              onclick="gerarSenha()"
             />
-            <label class="descricoes"> Letras minusculas </label>
-          </div>
-          <div class="campo-checkbox">
-            <input
-              type="checkbox"
-              id="checkbox-numeros"
-              class="personalizacao-caracteristicas-checkbox"
-              onclick="checkboxAtivoNumeros()"
-            />
-            <label class="descricoes">Números</label>
-          </div>
-          <div class="campo-checkbox">
-            <input
-              type="checkbox"
-              id="checkbox-simbolos"
-              class="personalizacao-caracteristicas-checkbox"
-              onclick="checkboxAtivoSimbolos()"
-            />
-            <label class="descricoes">Símbolos</label>
-          </div>
-        </div>
-        <div>
-          <div class="conf-subtitulos">Força da senha</div>
-          <div class="progress-bar"></div>
-          <div class="progress-bar-title-group">
-            <label class="descricoes">Fraca</label>
-            <label class="descricoes">Média</label>
-            <label class="descricoes">Forte</label>
           </div>
         </div>
       </div>
-    </div>
-    <div class="campo-botao">
-      <button class="cursor-apontar" onclick="copiaSenha()">
-        Copiar senha
-      </button>
+      <div class="campo-personalizacao">
+        <div class="personalizacao-titulo">Personalize sua senha</div>
+        <div class="personalizacao-conteudo">
+          <div class="personalizacao-numero-caracteres">
+            <div class="conf-subtitulos">Número de caracteres</div>
+            <input
+              class="cursor-apontar"
+              type="range"
+              min="4"
+              max="20"
+              id="range"
+              value="4"
+              onchange="mudancaDoRange(this.value)"
+            />
+            <div
+              class="personalizacao-conteudo-quantidade-caracteres conf-subtitulos"
+              id="quantidade"
+            ></div>
+          </div>
+          <div class="personalizacao-caracteristicas">
+            <div class="conf-subtitulos">Características da senha</div>
+            <div class="checkbox-maiusculas">
+              <input
+                type="checkbox"
+                id="checkbox-maiusculas"
+                class="personalizacao-caracteristicas-checkbox"
+                onclick="checkboxAtivoMaiusculas()"
+              />
+              <label class="descricoes"> Letras maiusculas </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="checkbox-minusculas"
+                class="personalizacao-caracteristicas-checkbox"
+                onclick="checkboxAtivoMinusculas()"
+                checked="checked"
+              />
+              <label class="descricoes"> Letras minusculas </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="checkbox-numeros"
+                class="personalizacao-caracteristicas-checkbox"
+                onclick="checkboxAtivoNumeros()"
+              />
+              <label class="descricoes">Números</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="checkbox-simbolos"
+                class="personalizacao-caracteristicas-checkbox"
+                onclick="checkboxAtivoSimbolos()"
+              />
+              <label class="descricoes">Símbolos</label>
+            </div>
+          </div>
+          <div class="progress-bar-com-titulo">
+            <div class="conf-subtitulos">Força da senha</div>
+            <div>
+              <div class="progress-bar"></div>
+              <div class="progress-bar-title-group">
+                <label class="descricoes">Fraca</label>
+                <label class="descricoes">Média</label>
+                <label class="descricoes">Forte</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="campo-botao">
+        <button class="cursor-apontar" onclick="copiaSenha()">
+          Copiar senha
+        </button>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>

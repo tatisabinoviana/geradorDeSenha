@@ -104,6 +104,7 @@ function gerarSenha() {
     document.getElementById('senha').innerHTML = resultadoSenha;
   }
 }
+
 function copiaSenha() {
   const textarea = document.createElement('textarea');
   textarea.value = resultadoSenha;
